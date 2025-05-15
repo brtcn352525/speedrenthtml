@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokasyonlarımız - SpeedRent Premium Araç Kiralama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="locations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo">
+                    <h1><span class="speed-text">SPEED</span><span class="rent-text">RENT</span></h1>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="cars.html">Araçlarımız</a></li>
+                        <li><a href="services.html">Hizmetlerimiz</a></li>
+                        <li><a href="locations.html" class="active">Lokasyonlar</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <a href="#" class="btn btn-outline"><i class="fas fa-user"></i> Giriş Yap</a>
+                    <a href="#" class="btn btn-primary"><i class="fas fa-car"></i> Hemen Kirala</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="locations-hero">
+            <div class="locations-hero-content">
+                <h1>Lokasyonlarımız</h1>
+                <p>Türkiye'nin birçok noktasında hizmetinizdeyiz</p>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="locations-hero-image" style="background-image: url('https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg');"></div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="section-header">
+                <h2>Şubelerimiz</h2>
+                <p>Size en yakın SpeedRent lokasyonunu bulun</p>
+            </div>
+            
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="location-finder">
+                    <h3>Şubelerimiz</h3>
+                    <div class="location-search">
+                        <input type="text" placeholder="Şehir veya ilçe ara...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="location-list">
+                        <div class="location-item active" data-lat="41.0082" data-lng="28.9784" data-zoom="15">
+                            <div class="location-icon"><i class="fas fa-building"></i></div>
+                            <div class="location-info">
+                                <h4>İstanbul Merkez (Ana Mağaza)</h4>
+                                <p>Bağdat Caddesi No:123, Kadıköy/İstanbul</p>
+                                <div class="location-details">
+                                    <span><i class="fas fa-phone"></i> +90 (212) 123 45 67</span>
+                                    <span><i class="fas fa-clock"></i> 08:00 - 22:00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-item" data-lat="41.2605" data-lng="28.7522" data-zoom="14">
+                            <div class="location-icon"><i class="fas fa-plane"></i></div>
+                            <div class="location-info">
+                                <h4>İstanbul Havalimanı</h4>
+                                <p>Dış Hatlar Terminali, Arnavutköy/İstanbul</p>
+                                <div class="location-details">
+                                    <span><i class="fas fa-phone"></i> +90 (212) 456 78 90</span>
+                                    <span><i class="fas fa-clock"></i> 24 Saat Açık</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-item" data-lat="40.9829" data-lng="29.1218" data-zoom="14">
+                            <div class="location-icon"><i class="fas fa-plane"></i></div>
+                            <div class="location-info">
+                                <h4>Sabiha Gökçen Havalimanı</h4>
+                                <p>Dış Hatlar Terminali, Pendik/İstanbul</p>
+                                <div class="location-details">
+                                    <span><i class="fas fa-phone"></i> +90 (216) 123 45 67</span>
+                                    <span><i class="fas fa-clock"></i> 24 Saat Açık</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-item" data-lat="39.9334" data-lng="32.8597" data-zoom="14">
+                            <div class="location-icon"><i class="fas fa-plane"></i></div>
+                            <div class="location-info">
+                                <h4>Ankara Esenboğa Havalimanı</h4>
+                                <p>Dış Hatlar Terminali, Çubuk/Ankara</p>
+                                <div class="location-details">
+                                    <span><i class="fas fa-phone"></i> +90 (312) 123 45 67</span>
+                                    <span><i class="fas fa-clock"></i> 24 Saat Açık</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-item" data-lat="38.4237" data-lng="27.1428" data-zoom="14">
+                            <div class="location-icon"><i class="fas fa-building"></i></div>
+                            <div class="location-info">
+                                <h4>İzmir Merkez</h4>
+                                <p>Alsancak, Kıbrıs Şehitleri Cad. No:45, Konak/İzmir</p>
+                                <div class="location-details">
+                                    <span><i class="fas fa-phone"></i> +90 (232) 123 45 67</span>
+                                    <span><i class="fas fa-clock"></i> 09:00 - 21:00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-item" data-lat="36.8969" data-lng="30.7133" data-zoom="14">
+                            <div class="location-icon"><i class="fas fa-umbrella-beach"></i></div>
+                            <div class="location-info">
+                                <h4>Antalya Merkez</h4>
+                                <p>Lara Cad. No:78, Muratpaşa/Antalya</p>
+                                <div class="location-details">
+                                    <span><i class="fas fa-phone"></i> +90 (242) 123 45 67</span>
+                                    <span><i class="fas fa-clock"></i> 09:00 - 22:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="section-header">
+                <h2>Sıkça Sorulan Sorular</h2>
+                <p>Lokasyonlarımız hakkında merak edilenler</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Şubelerinizden araç kiralamak için ne yapmam gerekiyor?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Şubelerimizden araç kiralamak için geçerli bir ehliyet, kimlik/pasaport ve kredi kartı yeterlidir. Önceden rezervasyon yapmanız durumunda işlemleriniz daha hızlı tamamlanacaktır. Ayrıca web sitemizden veya mobil uygulamamızdan online rezervasyon yapabilirsiniz.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Farklı bir şehirde aracı teslim edebilir miyim?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Evet, araçlarımızı farklı şehirlerde bulunan şubelerimize teslim edebilirsiniz. Bu hizmet için lokasyonlar arası mesafeye göre değişen ek bir ücret talep edilmektedir. Rezervasyon sırasında bu seçeneği belirtmeniz yeterlidir.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Şubeleriniz hafta sonu açık mı?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Evet, tüm şubelerimiz hafta sonları da hizmet vermektedir. Havalimanı şubelerimiz 7/24 açıktır. Şehir merkezindeki şubelerimiz ise genellikle sabah 08:00 - akşam 22:00 saatleri arasında hizmet vermektedir. Özel günlerde çalışma saatlerimiz değişiklik gösterebilir.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2><span class="speed-text">SPEED</span><span class="rent-text">RENT</span></h2>
+                    </div>
+                    <p>En iyi araç kiralama deneyimi için doğru adres. Premium araçlar, uygun fiyatlar, kusursuz hizmet.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Hızlı Linkler</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="cars.html">Araçlarımız</a></li>
+                        <li><a href="services.html">Hizmetlerimiz</a></li>
+                        <li><a href="locations.html">Lokasyonlar</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hizmetlerimiz</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Lüks Araç Kiralama</a></li>
+                        <li><a href="#">Uzun Dönem Kiralama</a></li>
+                        <li><a href="#">Şoförlü Araç Kiralama</a></li>
+                        <li><a href="#">Havalimanı Transfer</a></li>
+                        <li><a href="#">VIP Hizmetler</a></li>
+                        <li><a href="#">Kurumsal Kiralama</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>İletişim</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Bağdat Caddesi No:123, Kadıköy/İstanbul</li>
+                        <li><i class="fas fa-phone"></i> +90 (212) 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> info@speedrent.com</li>
+                        <li><i class="fas fa-clock"></i> Pazartesi - Pazar: 08:00 - 22:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SpeedRent. Tüm hakları saklıdır.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Kullanım Şartları</a>
+                    <a href="#">Gizlilik Politikası</a>
+                    <a href="#">Çerezler</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Google Maps JavaScript -->
+    <script>
+        // Google Maps API'yi başlatma
+        function initMap() {
+            // Ana mağaza koordinatları (İstanbul)
+            const mainStore = { lat: 41.0082, lng: 28.9784 };
+            
+            // Harita oluşturma
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: mainStore,
+                mapTypeControl: false,
+                streetViewControl: false,
+                fullscreenControl: true,
+                zoomControl: true,
+                styles: [
+                    {
+                        featureType: "poi",
+                        elementType: "labels",
+                        stylers: [{ visibility: "off" }],
+                    }
+                ]
+            });
+            
+            // Ana mağaza marker'ı
+            const mainMarker = new google.maps.Marker({
+                position: mainStore,
+                map: map,
+                title: "SpeedRent Ana Mağaza",
+                icon: {
+                    url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
+                    scaledSize: new google.maps.Size(50, 50)
+                },
+                animation: google.maps.Animation.DROP
+            });
+            
+            // Ana mağaza info window
+            const mainInfoWindow = new google.maps.InfoWindow({
+                content: `
+                    <div class="map-info-window">
+                        <h3>SpeedRent Ana Mağaza</h3>
+                        <p>Bağdat Caddesi No:123, Kadıköy/İstanbul</p>
+                        <p><strong>Tel:</strong> +90 (212) 123 45 67</p>
+                        <p><strong>Çalışma Saatleri:</strong> 08:00 - 22:00</p>
+                        <a href="https://maps.google.com/maps?q=41.0082,28.9784" target="_blank">Yol Tarifi Al</a>
+                    </div>
+                `
+            });
+            
+            // Ana mağaza marker'ına tıklama olayı
+            mainMarker.addListener("click", () => {
+                mainInfoWindow.open(map, mainMarker);
+            });
+            
+            // Diğer lokasyonlar için marker'lar
+            const locations = [
+                { lat: 41.2605, lng: 28.7522, title: "İstanbul Havalimanı", info: "Dış Hatlar Terminali, Arnavutköy" },
+                { lat: 40.9829, lng: 29.1218, title: "Sabiha Gökçen Havalimanı", info: "Dış Hatlar Terminali, Pendik" },
+                { lat: 39.9334, lng: 32.8597, title: "Ankara Esenboğa Havalimanı", info: "Dış Hatlar Terminali, Çubuk" },
+                { lat: 38.4237, lng: 27.1428, title: "İzmir Merkez", info: "Alsancak, Kıbrıs Şehitleri Cad. No:45" },
+                { lat: 36.8969, lng: 30.7133, title: "Antalya Merkez", info: "Lara Cad. No:78, Muratpaşa" }
+            ];
+            
+            // Her lokasyon için marker oluşturma
+            locations.forEach((location) => {
+                const marker = new google.maps.Marker({
+                    position: { lat: location.lat, lng: location.lng },
+                    map: map,
+                    title: location.title,
+                    icon: {
+                        url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+                        scaledSize: new google.maps.Size(40, 40)
+                    }
+                });
+                
+                // Her marker için info window
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `
+                        <div class="map-info-window">
+                            <h3>SpeedRent ${location.title}</h3>
+                            <p>${location.info}</p>
+                            <a href="https://maps.google.com/maps?q=${location.lat},${location.lng}" target="_blank">Yol Tarifi Al</a>
+                        </div>
+                    `
+                });
+                
+                // Marker'a tıklama olayı
+                marker.addListener("click", () => {
+                    infoWindow.open(map, marker);
+                });
+            });
+
+            // Lokasyon listesi item'larına tıklama olayı
+            const locationItems = document.querySelectorAll('.location-item');
+            locationItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Aktif item'ı güncelleme
+                    locationItems.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                    
+                    // Haritayı yeni konuma merkezleme
+                    const lat = parseFloat(item.getAttribute('data-lat'));
+                    const lng = parseFloat(item.getAttribute('data-lng'));
+                    const zoom = parseInt(item.getAttribute('data-zoom'));
+                    
+                    map.setCenter({ lat, lng });
+                    map.setZoom(zoom);
+                });
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap" async defer></script>
+    
+    <!-- FAQ Accordion Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const toggle = item.querySelector('.faq-toggle');
+                
+                question.addEventListener('click', () => {
+                    // Tüm diğer açık soruları kapat
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-toggle i').classList.remove('fa-minus');
+                            otherItem.querySelector('.faq-toggle i').classList.add('fa-plus');
+                        }
+                    });
+                    
+                    // Tıklanan soruyu aç/kapat
+                    item.classList.toggle('active');
+                    if (item.classList.contains('active')) {
+                        toggle.querySelector('i').classList.remove('fa-plus');
+                        toggle.querySelector('i').classList.add('fa-minus');
+                    } else {
+                        toggle.querySelector('i').classList.remove('fa-minus');
+                        toggle.querySelector('i').classList.add('fa-plus');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

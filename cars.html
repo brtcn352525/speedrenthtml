@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araçlarımız - SpeedRent Premium Araç Kiralama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cars.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo">
+                    <h1><span class="speed-text">SPEED</span><span class="rent-text">RENT</span></h1>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="cars.html" class="active">Araçlarımız</a></li>
+                        <li><a href="services.html">Hizmetlerimiz</a></li>
+                        <li><a href="locations.html">Lokasyonlar</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <a href="#" class="btn btn-outline"><i class="fas fa-user"></i> Giriş Yap</a>
+                    <a href="#" class="btn btn-primary"><i class="fas fa-car"></i> Hemen Kirala</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>Araç Filomuzu Keşfedin</h1>
+                <p>En lüks ve en konforlu araçlarımızdan birini seçin</p>
+            </div>
+        </section>
+
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <label>Araç Tipi</label>
+                        <select id="carType">
+                            <option value="all">Tümü</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="Hatchback">Hatchback</option>
+                            <option value="Spor">Spor</option>
+                            <option value="Lüks">Lüks</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Marka</label>
+                        <select id="brand">
+                            <option value="all">Tümü</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Mercedes">Mercedes</option>
+                            <option value="Audi">Audi</option>
+                            <option value="Volkswagen">Volkswagen</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Porsche">Porsche</option>
+                            <option value="Ferrari">Ferrari</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Fiyat Aralığı</label>
+                        <select id="priceRange">
+                            <option value="all">Tümü</option>
+                            <option value="0-1000">₺0 - ₺1,000</option>
+                            <option value="1000-2000">₺1,000 - ₺2,000</option>
+                            <option value="2000-3000">₺2,000 - ₺3,000</option>
+                            <option value="3000+">₺3,000 +</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Vites</label>
+                        <select id="transmission">
+                            <option value="all">Tümü</option>
+                            <option value="Otomatik">Otomatik</option>
+                            <option value="Manuel">Manuel</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Yakıt Tipi</label>
+                        <select id="fuelType">
+                            <option value="all">Tümü</option>
+                            <option value="Benzin">Benzin</option>
+                            <option value="Dizel">Dizel</option>
+                            <option value="Hibrit">Hibrit</option>
+                            <option value="Elektrik">Elektrik</option>
+                        </select>
+                    </div>
+                    <button class="filter-button btn btn-primary" id="applyFilter">
+                        <i class="fas fa-filter"></i> Filtrele
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cars Grid Section -->
+        <section class="cars-grid-section">
+            <div class="container">
+                <div class="grid-header">
+                    <h2>Premium Araçlarımız <span>(24 araç)</span></h2>
+                    <div class="grid-options">
+                        <div class="sort-by">
+                            <label>Sırala:</label>
+                            <select>
+                                <option>Önerilen</option>
+                                <option>Fiyat (Artan)</option>
+                                <option>Fiyat (Azalan)</option>
+                                <option>En Yeniler</option>
+                            </select>
+                        </div>
+                        <div class="view-options">
+                            <button class="view-option active" data-view="grid"><i class="fas fa-th-large"></i></button>
+                            <button class="view-option" data-view="list"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cars-grid" id="page1">
+                    <!-- Car Card 1 -->
+                    <div class="car-card">
+                        <div class="car-badge">%15 İndirim</div>
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mercedes C200">
+                        </div>
+                        <div class="car-details">
+                            <div class="car-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/1200px-Mercedes-Logo.svg.png" alt="Mercedes Logo"></div>
+                            <h3>Mercedes C200 AMG</h3>
+                            <div class="car-specs">
+                                <div class="spec"><i class="fas fa-car"></i> 2023</div>
+                                <div class="spec"><i class="fas fa-cog"></i> Otomatik</div>
+                                <div class="spec"><i class="fas fa-gas-pump"></i> Benzin</div>
+                                <div class="spec"><i class="fas fa-road"></i> Limitsiz KM</div>
+                            </div>
+                            <div class="car-features">
+                                <span><i class="fas fa-snowflake"></i> Klima</span>
+                                <span><i class="fas fa-wifi"></i> Bluetooth</span>
+                                <span><i class="fas fa-map"></i> Navigasyon</span>
+                                <span><i class="fas fa-suitcase"></i> 5 Çanta</span>
+                                <span><i class="fas fa-user"></i> 5 Kişi</span>
+                                <span><i class="fas fa-tachometer-alt"></i> Hız Sabitleyici</span>
+                            </div>
+                            <div class="car-price">
+                                <div class="price"><span class="old">₺2,500</span> <span class="current">₺2,125</span><span class="period">/gün</span></div>
+                                <a href="#" class="btn btn-secondary">Hemen Kirala</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 2 -->
+                    <div class="car-card">
+                        <div class="car-badge hot">En Çok Tercih Edilen</div>
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="BMW 320i">
+                        </div>
+                        <div class="car-details">
+                            <div class="car-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/1200px-BMW.svg.png" alt="BMW Logo"></div>
+                            <h3>BMW 320i M Sport</h3>
+                            <div class="car-specs">
+                                <div class="spec"><i class="fas fa-car"></i> 2023</div>
+                                <div class="spec"><i class="fas fa-cog"></i> Otomatik</div>
+                                <div class="spec"><i class="fas fa-gas-pump"></i> Benzin</div>
+                                <div class="spec"><i class="fas fa-road"></i> Limitsiz KM</div>
+                            </div>
+                            <div class="car-features">
+                                <span><i class="fas fa-snowflake"></i> Klima</span>
+                                <span><i class="fas fa-wifi"></i> Bluetooth</span>
+                                <span><i class="fas fa-map"></i> Navigasyon</span>
+                                <span><i class="fas fa-suitcase"></i> 4 Çanta</span>
+                                <span><i class="fas fa-user"></i> 5 Kişi</span>
+                                <span><i class="fas fa-tachometer-alt"></i> Hız Sabitleyici</span>
+                            </div>
+                            <div class="car-price">
+                                <div class="price"><span class="current">₺2,350</span><span class="period">/gün</span></div>
+                                <a href="#" class="btn btn-secondary">Hemen Kirala</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 3 -->
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Audi A4">
+                        </div>
+                        <div class="car-details">
+                            <div class="car-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Audi-Logo_2016.svg/1200px-Audi-Logo_2016.svg.png" alt="Audi Logo"></div>
+                            <h3>Audi A4 S-Line</h3>
+                            <div class="car-specs">
+                                <div class="spec"><i class="fas fa-car"></i> 2022</div>
+                                <div class="spec"><i class="fas fa-cog"></i> Otomatik</div>
+                                <div class="spec"><i class="fas fa-gas-pump"></i> Dizel</div>
+                                <div class="spec"><i class="fas fa-road"></i> Limitsiz KM</div>
+                            </div>
+                            <div class="car-features">
+                                <span><i class="fas fa-snowflake"></i> Klima</span>
+                                <span><i class="fas fa-wifi"></i> Bluetooth</span>
+                                <span><i class="fas fa-map"></i> Navigasyon</span>
+                                <span><i class="fas fa-suitcase"></i> 4 Çanta</span>
+                                <span><i class="fas fa-user"></i> 5 Kişi</span>
+                                <span><i class="fas fa-tachometer-alt"></i> Hız Sabitleyici</span>
+                            </div>
+                            <div class="car-price">
+                                <div class="price"><span class="current">₺2,250</span><span class="period">/gün</span></div>
+                                <a href="#" class="btn btn-secondary">Hemen Kirala</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 4 -->
+                    <div class="car-card">
+                        <div class="car-badge">%20 İndirim</div>
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Volkswagen Passat">
+                        </div>
+                        <div class="car-details">
+                            <div class="car-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Volkswagen_Logo_till_1995.svg/1200px-Volkswagen_Logo_till_1995.svg.png" alt="Volkswagen Logo"></div>
+                            <h3>Volkswagen Passat</h3>
+                            <div class="car-specs">
+                                <div class="spec"><i class="fas fa-car"></i> 2022</div>
+                                <div class="spec"><i class="fas fa-cog"></i> Otomatik</div>
+                                <div class="spec"><i class="fas fa-gas-pump"></i> Dizel</div>
+                                <div class="spec"><i class="fas fa-road"></i> Limitsiz KM</div>
+                            </div>
+                            <div class="car-features">
+                                <span><i class="fas fa-snowflake"></i> Klima</span>
+                                <span><i class="fas fa-wifi"></i> Bluetooth</span>
+                                <span><i class="fas fa-map"></i> Navigasyon</span>
+                                <span><i class="fas fa-suitcase"></i> 5 Çanta</span>
+                                <span><i class="fas fa-user"></i> 5 Kişi</span>
+                                <span><i class="fas fa-tachometer-alt"></i> Hız Sabitleyici</span>
+                            </div>
+                            <div class="car-price">
+                                <div class="price"><span class="old">₺2,000</span> <span class="current">₺1,600</span><span class="period">/gün</span></div>
+                                <a href="#" class="btn btn-secondary">Hemen Kirala</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 5 -->
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1619405399537-b134e0cd8a6b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Toyota Corolla">
+                        </div>
+                        <div class="car-details">
+                            <div class="car-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Toyota_carlogo.svg/1200px-Toyota_carlogo.svg.png" alt="Toyota Logo"></div>
+                            <h3>Toyota Corolla Hybrid</h3>
+                            <div class="car-specs">
+                                <div class="spec"><i class="fas fa-car"></i> 2022</div>
+                                <div class="spec"><i class="fas fa-cog"></i> Otomatik</div>
+                                <div class="spec"><i class="fas fa-gas-pump"></i> Hibrit</div>
+                                <div class="spec"><i class="fas fa-road"></i> Limitsiz KM</div>
+                            </div>
+                            <div class="car-features">
+                                <span><i class="fas fa-snowflake"></i> Klima</span>
+                                <span><i class="fas fa-wifi"></i> Bluetooth</span>
+                                <span><i class="fas fa-map"></i> Navigasyon</span>
+                                <span><i class="fas fa-suitcase"></i> 4 Çanta</span>
+                                <span><i class="fas fa-user"></i> 5 Kişi</span>
+                                <span><i class="fas fa-tachometer-alt"></i> Hız Sabitleyici</span>
+                            </div>
+                            <div class="car-price">
+                                <div class="price"><span class="current">₺1,800</span><span class="period">/gün</span></div>
+                                <a href="#" class="btn btn-secondary">Hemen Kirala</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 6 -->
+                    <div class="car-card">
+                        <div class="car-badge">Yeni</div>
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Range Rover">
+                        </div>
+                        <div class="car-details">
+                            <div class="car-brand"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Range_Rover_Logo.svg/1200px-Range_Rover_Logo.svg.png" alt="Range Rover Logo"></div>
+                            <h3>Range Rover Sport</h3>
+                            <div class="car-specs">
+                                <div class="spec"><i class="fas fa-car"></i> 2023</div>
+                                <div class="spec"><i class="fas fa-cog"></i> Otomatik</div>
+                                <div class="spec"><i class="fas fa-gas-pump"></i> Dizel</div>
+                                <div class="spec"><i class="fas fa-road"></i> Limitsiz KM</div>
+                            </div>
+                            <div class="car-features">
+                                <span><i class="fas fa-snowflake"></i> Klima</span>
+                                <span><i class="fas fa-wifi"></i> Bluetooth</span>
+                                <span><i class="fas fa-map"></i> Navigasyon</span>
+                                <span><i class="fas fa-suitcase"></i> 6 Çanta</span>
+                                <span><i class="fas fa-user"></i> 5 Kişi</span>
+                                <span><i class="fas fa-tachometer-alt"></i> Hız Sabitleyici</span>
+                            </div>
+                            <div class="car-price">
+                                <div class="price"><span class="current">₺3,500</span><span class="period">/gün</span></div>
+                                <a href="#" class="btn btn-secondary">Hemen Kirala</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="cars.html" class="page-btn active">1</a>
+                    <a href="cars-page2.html" class="page-btn">2</a>
+                    <a href="cars-page3.html" class="page-btn">3</a>
+                    <a href="cars-page4.html" class="page-btn">4</a>
+                    <a href="cars-page2.html" class="page-btn next"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Sıkça Sorulan Sorular</h2>
+                    <p>Araç kiralama için merak edilenler</p>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Araç kiralamak için gerekli belgeler nelerdir?</h3>
+                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Araç kiralamak için geçerli bir ehliyet (en az 1 yıllık), kimlik belgesi ve kredi kartı gerekmektedir. Yabancı uyruklular için pasaport ve uluslararası sürücü belgesi talep edilmektedir.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Kiralama süresince yakıt politikanız nedir?</h3>
+                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Araçlarımız dolu yakıt deposu ile teslim edilir ve aynı şekilde dolu yakıt deposu ile iade edilmelidir. Eksik yakıt durumunda iade sırasında fark ücreti tahsil edilmektedir.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Rezervasyon iptal politikanız nedir?</h3>
+                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Araç tesliminden 48 saat öncesine kadar yapılan iptallerde herhangi bir ücret alınmaz. 24-48 saat arası iptallerde %30, 24 saatten az kala yapılan iptallerde %50 ücret tahsil edilir.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Araç kiralama yaşı sınırı nedir?</h3>
+                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>SpeedRent olarak standart araçlar için minimum 21 yaş, lüks araçlar için minimum 25 yaş sınırımız bulunmaktadır. Ayrıca en az 1 yıllık ehliyet şartı aramaktayız.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Siz de Hayalinizdeki Aracı Şimdi Kiralayın!</h2>
+                <p>Özel fırsatlardan yararlanmak için hemen rezervasyon yapın.</p>
+                <a href="#" class="btn btn-large btn-primary">Hemen Rezervasyon Yap</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2><span class="speed-text">SPEED</span><span class="rent-text">RENT</span></h2>
+                    </div>
+                    <p>En iyi araç kiralama deneyimi için doğru adres. Premium araçlar, uygun fiyatlar, kusursuz hizmet.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Hızlı Linkler</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="cars.html">Araçlarımız</a></li>
+                        <li><a href="#">Hizmetlerimiz</a></li>
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hizmetlerimiz</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Lüks Araç Kiralama</a></li>
+                        <li><a href="#">Uzun Dönem Kiralama</a></li>
+                        <li><a href="#">Şoförlü Araç Kiralama</a></li>
+                        <li><a href="#">Havalimanı Transfer</a></li>
+                        <li><a href="#">VIP Hizmetler</a></li>
+                        <li><a href="#">Kurumsal Kiralama</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>İletişim</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Bağdat Caddesi No:123, Kadıköy/İstanbul</li>
+                        <li><i class="fas fa-phone"></i> +90 (212) 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> info@speedrent.com</li>
+                        <li><i class="fas fa-clock"></i> Pazartesi - Pazar: 08:00 - 22:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SpeedRent. Tüm hakları saklıdır.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Kullanım Şartları</a>
+                    <a href="#">Gizlilik Politikası</a>
+                    <a href="#">Çerezler</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    mobileMenuToggle.classList.toggle('active');
+                });
+            }
+            
+            // FAQ Toggles
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                    
+                    // Update icon
+                    const icon = item.querySelector('.faq-icon i');
+                    if (item.classList.contains('active')) {
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                    } else {
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                    }
+                });
+            });
+            
+            // View Options
+            const viewOptions = document.querySelectorAll('.view-option');
+            const carsGrid = document.querySelector('.cars-grid');
+            
+            viewOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const view = this.getAttribute('data-view');
+                    
+                    // Remove active class from all options
+                    viewOptions.forEach(opt => opt.classList.remove('active'));
+                    
+                    // Add active class to clicked option
+                    this.classList.add('active');
+                    
+                    // Set view type on grid
+                    if (view === 'list') {
+                        carsGrid.classList.add('list-view');
+                    } else {
+                        carsGrid.classList.remove('list-view');
+                    }
+                });
+            });
+
+            // Filter Functionality
+            const applyFilterBtn = document.getElementById('applyFilter');
+            if (applyFilterBtn) {
+                applyFilterBtn.addEventListener('click', function() {
+                    filterCars();
+                });
+            }
+
+            function filterCars() {
+                const carType = document.getElementById('carType').value;
+                const brand = document.getElementById('brand').value;
+                const priceRange = document.getElementById('priceRange').value;
+                const transmission = document.getElementById('transmission').value;
+                const fuelType = document.getElementById('fuelType').value;
+                
+                const cars = document.querySelectorAll('.car-card');
+                let visibleCount = 0;
+                
+                cars.forEach(car => {
+                    const carBrand = car.querySelector('.car-brand img').alt.split(' ')[0];
+                    const carTransmission = car.querySelector('.car-specs').innerText.includes('Otomatik') ? 'Otomatik' : 'Manuel';
+                    const carFuelType = Array.from(car.querySelectorAll('.spec')).find(el => el.innerHTML.includes('fa-gas-pump')).innerText.replace(/\s+/g, '').replace('Benzin', 'Benzin').replace('Dizel', 'Dizel').replace('Hibrit', 'Hibrit').replace('Elektrik', 'Elektrik');
+                    
+                    const priceText = car.querySelector('.car-price .current').innerText.replace(/[^\d]/g, '');
+                    const price = parseInt(priceText);
+                    
+                    // Price range filtering
+                    let matchesPrice = priceRange === 'all';
+                    if (priceRange === '0-1000' && price <= 1000) matchesPrice = true;
+                    if (priceRange === '1000-2000' && price > 1000 && price <= 2000) matchesPrice = true;
+                    if (priceRange === '2000-3000' && price > 2000 && price <= 3000) matchesPrice = true;
+                    if (priceRange === '3000+' && price > 3000) matchesPrice = true;
+                    
+                    // Simple car type matching based on car name (can be improved with data attributes)
+                    const carName = car.querySelector('h3').innerText.toLowerCase();
+                    let matchesType = carType === 'all';
+                    if (carType === 'SUV' && (carName.includes('q7') || carName.includes('x5') || carName.includes('levante') || carName.includes('xc90') || carName.includes('g-class') || carName.includes('range') || carName.includes('f-pace'))) matchesType = true;
+                    if (carType === 'Sedan' && (carName.includes('c200') || carName.includes('320i') || carName.includes('a4') || carName.includes('passat') || carName.includes('corolla'))) matchesType = true;
+                    if (carType === 'Hatchback' && (carName.includes('clio') || carName.includes('focus') || carName.includes('500') || carName.includes('mini'))) matchesType = true;
+                    if (carType === 'Spor' && (carName.includes('911') || carName.includes('huracan') || carName.includes('roma') || carName.includes('lc500'))) matchesType = true;
+                    if (carType === 'Lüks' && (carName.includes('bentley') || carName.includes('db11') || carName.includes('continental'))) matchesType = true;
+                    
+                    const matchesBrand = brand === 'all' || carBrand.includes(brand);
+                    const matchesTransmission = transmission === 'all' || carTransmission === transmission;
+                    const matchesFuel = fuelType === 'all' || carFuelType.includes(fuelType);
+                    
+                    if (matchesType && matchesBrand && matchesPrice && matchesTransmission && matchesFuel) {
+                        car.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        car.style.display = 'none';
+                    }
+                });
+                
+                // Update visible car count
+                const totalCarsDisplay = document.querySelector('.grid-header h2 span');
+                if (totalCarsDisplay) {
+                    totalCarsDisplay.textContent = `(${visibleCount} araç)`;
+                }
+                
+                // Show message if no cars match filters
+                const noResultsMsg = document.getElementById('noResultsMsg');
+                if (visibleCount === 0) {
+                    if (!noResultsMsg) {
+                        const msg = document.createElement('div');
+                        msg.id = 'noResultsMsg';
+                        msg.className = 'no-results-message';
+                        msg.innerHTML = `
+                            <i class="fas fa-exclamation-circle"></i>
+                            <p>Seçilen filtrelere uygun araç bulunamadı. Lütfen filtrelerinizi değiştirin.</p>
+                        `;
+                        carsGrid.parentNode.insertBefore(msg, carsGrid.nextSibling);
+                    }
+                } else if (noResultsMsg) {
+                    noResultsMsg.remove();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

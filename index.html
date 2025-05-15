@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedRent - Premium Araç Kiralama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo">
+                    <h1><span class="speed-text">SPEED</span><span class="rent-text">RENT</span></h1>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                        <li><a href="cars.html">Araçlarımız</a></li>
+                        <li><a href="services.html">Hizmetlerimiz</a></li>
+                        <li><a href="locations.html">Lokasyonlar</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <a href="#" class="btn btn-outline"><i class="fas fa-user"></i> Giriş Yap</a>
+                    <a href="#" class="btn btn-primary"><i class="fas fa-car"></i> Hemen Kirala</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Hayalinizdeki Aracı Kiralayın</h1>
+                <p>Lüks, spor, ekonomik - her ihtiyaca uygun araçlar. Anında rezervasyon, uygun fiyatlar.</p>
+                <div class="search-container">
+                    <div class="search-form">
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker-alt"></i> Alış Lokasyonu</label>
+                            <select>
+                                <option>Seçiniz</option>
+                                <option>İstanbul Havalimanı</option>
+                                <option>İstanbul Sabiha Gökçen</option>
+                                <option>Ankara Esenboğa</option>
+                                <option>İzmir Adnan Menderes</option>
+                                <option>Antalya Havalimanı</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker-alt"></i> Dönüş Lokasyonu</label>
+                            <select>
+                                <option>Seçiniz</option>
+                                <option>İstanbul Havalimanı</option>
+                                <option>İstanbul Sabiha Gökçen</option>
+                                <option>Ankara Esenboğa</option>
+                                <option>İzmir Adnan Menderes</option>
+                                <option>Antalya Havalimanı</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-calendar-alt"></i> Alış Tarihi</label>
+                            <input type="date">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-calendar-alt"></i> Dönüş Tarihi</label>
+                            <input type="date">
+                        </div>
+                        <div class="form-action">
+                            <button class="search-button">
+                                <i class="fas fa-search"></i> Araç Bul
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-slider">
+                <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');"></div>
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');"></div>
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');"></div>
+            </div>
+        </section>
+
+        <!-- Featured Cars Section -->
+        <section class="featured-cars">
+            <div class="section-header">
+                <h2>Öne Çıkan Araçlarımız</h2>
+                <p>En popüler ve en çok tercih edilen araçlarımız</p>
+                <a href="cars.html" class="view-all">Tüm Araçları Görüntüle <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="car-grid">
+                <div class="car-card">
+                    <div class="car-badge">%15 İndirim</div>
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mercedes C200">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/1200px-Mercedes-Logo.svg.png" alt="Mercedes Logo"></div>
+                        <h3>Mercedes C200 AMG</h3>
+                        <div class="car-specs">
+                            <div class="spec"><i class="fas fa-car"></i> 2023</div>
+                            <div class="spec"><i class="fas fa-cog"></i> Otomatik</div>
+                            <div class="spec"><i class="fas fa-gas-pump"></i> Benzin</div>
+                            <div class="spec"><i class="fas fa-road"></i> Limitsiz KM</div>
+                        </div>
+                        <div class="car-price">
+                            <div class="price"><span class="old">₺2,500</span> <span class="current">₺2,125</span><span class="period">/gün</span></div>
+                            <a href="#" class="btn btn-secondary">Hemen Kirala</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-badge hot">En Çok Tercih Edilen</div>
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="BMW 320i">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/1200px-BMW.svg.png" alt="BMW Logo"></div>
+                        <h3>BMW 320i M Sport</h3>
+                        <div class="car-specs">
+                            <div class="spec"><i class="fas fa-car"></i> 2023</div>
+                            <div class="spec"><i class="fas fa-cog"></i> Otomatik</div>
+                            <div class="spec"><i class="fas fa-gas-pump"></i> Benzin</div>
+                            <div class="spec"><i class="fas fa-road"></i> Limitsiz KM</div>
+                        </div>
+                        <div class="car-price">
+                            <div class="price"><span class="current">₺2,350</span><span class="period">/gün</span></div>
+                            <a href="#" class="btn btn-secondary">Hemen Kirala</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Audi A4">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Audi-Logo_2016.svg/1200px-Audi-Logo_2016.svg.png" alt="Audi Logo"></div>
+                        <h3>Audi A4 S-Line</h3>
+                        <div class="car-specs">
+                            <div class="spec"><i class="fas fa-car"></i> 2022</div>
+                            <div class="spec"><i class="fas fa-cog"></i> Otomatik</div>
+                            <div class="spec"><i class="fas fa-gas-pump"></i> Dizel</div>
+                            <div class="spec"><i class="fas fa-road"></i> Limitsiz KM</div>
+                        </div>
+                        <div class="car-price">
+                            <div class="price"><span class="current">₺2,250</span><span class="period">/gün</span></div>
+                            <a href="#" class="btn btn-secondary">Hemen Kirala</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-badge">%20 İndirim</div>
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Volkswagen Passat">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Volkswagen_Logo_till_1995.svg/1200px-Volkswagen_Logo_till_1995.svg.png" alt="Volkswagen Logo"></div>
+                        <h3>Volkswagen Passat</h3>
+                        <div class="car-specs">
+                            <div class="spec"><i class="fas fa-car"></i> 2022</div>
+                            <div class="spec"><i class="fas fa-cog"></i> Otomatik</div>
+                            <div class="spec"><i class="fas fa-gas-pump"></i> Dizel</div>
+                            <div class="spec"><i class="fas fa-road"></i> Limitsiz KM</div>
+                        </div>
+                        <div class="car-price">
+                            <div class="price"><span class="old">₺2,000</span> <span class="current">₺1,600</span><span class="period">/gün</span></div>
+                            <a href="#" class="btn btn-secondary">Hemen Kirala</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us">
+            <div class="section-header">
+                <h2>Neden SpeedRent?</h2>
+                <p>Size en iyi araç kiralama deneyimini sunmak için buradayız</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Premium Araç Filosu</h3>
+                    <p>En yeni ve en bakımlı araçlarla hizmetinizdeyiz. Aracınız her zaman temiz ve bakımlıdır.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Uygun Fiyatlar</h3>
+                    <p>Rekabetçi fiyatlarımız ve sık kullanıcılara özel indirimlerimiz ile bütçenize uygun çözümler.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>7/24 Müşteri Desteği</h3>
+                    <p>Her an yanınızdayız. Herhangi bir sorun durumunda hızlıca destek alabilirsiniz.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Çok Lokasyonlu Hizmet</h3>
+                    <p>Tüm havalimanları ve şehir merkezlerinde araç teslim ve iade noktalarımız mevcuttur.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Tam Sigorta</h3>
+                    <p>Tüm araçlarımız tam sigortalıdır. Ekstra güvenlik için ek paketlerimizi inceleyebilirsiniz.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Limitsiz Kilometre</h3>
+                    <p>Kilometre sınırı olmadan istediğiniz kadar yol yapabilirsiniz. Özgürce seyahat edin.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rental Process Section -->
+        <section class="rental-process">
+            <div class="section-header">
+                <h2>Kiralama Adımları</h2>
+                <p>3 basit adımda araç kiralayın</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                        <div class="step-number">1</div>
+                    </div>
+                    <h3>Araç Seçin</h3>
+                    <p>İhtiyacınıza uygun aracı bulun ve tarih seçin</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-credit-card"></i>
+                        <div class="step-number">2</div>
+                    </div>
+                    <h3>Rezervasyon Yapın</h3>
+                    <p>Kişisel bilgilerinizi girin ve ödeme yapın</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-key"></i>
+                        <div class="step-number">3</div>
+                    </div>
+                    <h3>Aracınızı Alın</h3>
+                    <p>Belirlediğiniz noktadan aracınızı teslim alın</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="section-header">
+                <h2>Müşteri Yorumları</h2>
+                <p>Hizmet kalitemizi müşterilerimizden dinleyin</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Araçlar her zaman temiz ve bakımlı. Kiralama süreci çok kolay ve hızlı. İş seyahatlerimde sürekli SpeedRent tercih ediyorum."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Müşteri">
+                        <div class="author-info">
+                            <h4>Mehmet Yılmaz</h4>
+                            <p>İş İnsanı</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Tatilimiz için kiraladığımız araç mükemmeldi. Herhangi bir sorun yaşamadık. Personel çok yardımcı oldu. Kesinlikle tavsiye ederim."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Müşteri">
+                        <div class="author-info">
+                            <h4>Ayşe Demir</h4>
+                            <p>Öğretmen</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Premium araçları bu kadar uygun fiyatlarla kiralayabilmek harika. Müşteri hizmetleri de çok ilgili. Her şey için teşekkürler!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Müşteri">
+                        <div class="author-info">
+                            <h4>Ali Kaya</h4>
+                            <p>Mühendis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Lüks Araç Kiralama Deneyimi Sizi Bekliyor!</h2>
+                <p>Siz de ayrıcalıklı SpeedRent hizmetinden yararlanmak için hemen rezervasyon yapın.</p>
+                <a href="cars.html" class="btn btn-large btn-primary">Araçları İncele</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2><span class="speed-text">SPEED</span><span class="rent-text">RENT</span></h2>
+                    </div>
+                    <p>En iyi araç kiralama deneyimi için doğru adres. Premium araçlar, uygun fiyatlar, kusursuz hizmet.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Hızlı Linkler</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Ana Sayfa</a></li>
+                        <li><a href="cars.html">Araçlarımız</a></li>
+                        <li><a href="#">Hizmetlerimiz</a></li>
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hizmetlerimiz</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Lüks Araç Kiralama</a></li>
+                        <li><a href="#">Uzun Dönem Kiralama</a></li>
+                        <li><a href="#">Şoförlü Araç Kiralama</a></li>
+                        <li><a href="#">Havalimanı Transfer</a></li>
+                        <li><a href="#">VIP Hizmetler</a></li>
+                        <li><a href="#">Kurumsal Kiralama</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>İletişim</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Bağdat Caddesi No:123, Kadıköy/İstanbul</li>
+                        <li><i class="fas fa-phone"></i> +90 (212) 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> info@speedrent.com</li>
+                        <li><i class="fas fa-clock"></i> Pazartesi - Pazar: 08:00 - 22:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SpeedRent. Tüm hakları saklıdır.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Kullanım Şartları</a>
+                    <a href="#">Gizlilik Politikası</a>
+                    <a href="#">Çerezler</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    mobileMenuToggle.classList.toggle('active');
+                });
+            }
+            
+            // Hero Slider
+            const heroSlides = document.querySelectorAll('.hero-slide');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                heroSlides.forEach(slide => slide.classList.remove('active'));
+                heroSlides[index].classList.add('active');
+                currentSlide = index;
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % heroSlides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Auto slide every 5 seconds
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+</body>
+</html>

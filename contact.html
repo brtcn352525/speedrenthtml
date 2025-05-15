@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - SpeedRent Premium Araç Kiralama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo">
+                    <h1><span class="speed-text">SPEED</span><span class="rent-text">RENT</span></h1>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="cars.html">Araçlarımız</a></li>
+                        <li><a href="services.html">Hizmetlerimiz</a></li>
+                        <li><a href="locations.html">Lokasyonlar</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="contact.html" class="active">İletişim</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <a href="#" class="btn btn-outline"><i class="fas fa-user"></i> Giriş Yap</a>
+                    <a href="#" class="btn btn-primary"><i class="fas fa-car"></i> Hemen Kirala</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <h1>İletişim</h1>
+                <p>Sorularınız için bize ulaşın</p>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="contact-hero-image"></div>
+        </section>
+
+        <!-- Contact Info Section -->
+        <section class="contact-info-section">
+            <div class="section-header">
+                <h2>İletişim Bilgilerimiz</h2>
+                <p>Size yardımcı olmak için buradayız</p>
+            </div>
+            
+            <div class="contact-info-container">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Adresimiz</h3>
+                    <p>Bağdat Caddesi No:123, Kadıköy</p>
+                    <p>İstanbul, Türkiye</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Telefon</h3>
+                    <p>+90 (212) 123 45 67</p>
+                    <p>+90 (212) 765 43 21</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>E-posta</h3>
+                    <p>info@speedrent.com</p>
+                    <p>destek@speedrent.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Çalışma Saatleri</h3>
+                    <p>Pazartesi - Cumartesi: 08:00 - 22:00</p>
+                    <p>Pazar: 10:00 - 20:00</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form-section">
+            <div class="contact-content">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>Bize Mesaj Gönderin</h2>
+                        <p>Sorularınızı, önerilerinizi veya isteklerinizi bize iletin. En kısa sürede size dönüş yapacağız.</p>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Adınız Soyadınız</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-posta Adresiniz</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefon Numaranız</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Konu</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>Konu seçiniz</option>
+                                    <option value="reservation">Rezervasyon</option>
+                                    <option value="price">Fiyat Bilgisi</option>
+                                    <option value="complaint">Şikayet</option>
+                                    <option value="suggestion">Öneri</option>
+                                    <option value="other">Diğer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mesajınız</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">Kişisel verilerin işlenmesine ilişkin <a href="#">aydınlatma metnini</a> okudum ve kabul ediyorum.</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gönder</button>
+                    </form>
+                </div>
+                
+                <div class="contact-map">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="section-header">
+                <h2>Sıkça Sorulan Sorular</h2>
+                <p>Merak edilen konulara hızlı yanıtlar</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Araç kiralama işlemi nasıl yapılır?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Araç kiralamak için web sitemizden, mobil uygulamamızdan veya şubelerimizi ziyaret ederek rezervasyon yapabilirsiniz. Rezervasyon sırasında istediğiniz araç modelini, kiralama tarihlerini ve ek hizmetleri seçebilirsiniz. Rezervasyon onayınız e-posta adresinize gönderilecektir. Aracı teslim almak için geçerli bir ehliyet, kimlik/pasaport ve kredi kartı ile birlikte seçtiğiniz tarihte ve lokasyonda hazır bulunmanız yeterlidir.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Kiralama için minimum yaş sınırı nedir?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SpeedRent'te standart araçlar için minimum yaş sınırı 21, lüks ve premium araçlar için ise 25'tir. Ayrıca, en az 1 yıllık geçerli bir sürücü belgesine sahip olmanız gerekmektedir. 25 yaş altındaki sürücüler için ek genç sürücü ücreti uygulanabilir.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>İptal ve değişiklik politikanız nedir?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Rezervasyonunuzu teslim tarihinden 48 saat öncesine kadar ücretsiz olarak iptal edebilir veya değiştirebilirsiniz. Bu süreden sonra yapılan iptallerde bir günlük kiralama bedeli kadar iptal ücreti alınabilir. Değişiklikler için müşteri hizmetlerimizle iletişime geçmeniz gerekmektedir.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Yakıt politikanız nedir?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Araçlarımız size dolu yakıt deposuyla teslim edilir ve aynı şekilde dolu olarak teslim edilmesi beklenir. Eğer aracı eksik yakıtla teslim ederseniz, eksik yakıt miktarı için güncel yakıt fiyatına ek hizmet bedeli eklenerek ücretlendirilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Size Nasıl Yardımcı Olabiliriz?</h2>
+                <p>Özel talepleriniz veya sorularınız için müşteri hizmetleri ekibimize doğrudan ulaşabilirsiniz.</p>
+                <div class="cta-buttons">
+                    <a href="tel:+902121234567" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Bizi Arayın</a>
+                    <a href="mailto:info@speedrent.com" class="btn btn-outline"><i class="fas fa-envelope"></i> E-posta Gönderin</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2><span class="speed-text">SPEED</span><span class="rent-text">RENT</span></h2>
+                    </div>
+                    <p>En iyi araç kiralama deneyimi için doğru adres. Premium araçlar, uygun fiyatlar, kusursuz hizmet.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Hızlı Linkler</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="cars.html">Araçlarımız</a></li>
+                        <li><a href="services.html">Hizmetlerimiz</a></li>
+                        <li><a href="locations.html">Lokasyonlar</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hizmetlerimiz</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Lüks Araç Kiralama</a></li>
+                        <li><a href="#">Uzun Dönem Kiralama</a></li>
+                        <li><a href="#">Şoförlü Araç Kiralama</a></li>
+                        <li><a href="#">Havalimanı Transfer</a></li>
+                        <li><a href="#">VIP Hizmetler</a></li>
+                        <li><a href="#">Kurumsal Kiralama</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>İletişim</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Bağdat Caddesi No:123, Kadıköy/İstanbul</li>
+                        <li><i class="fas fa-phone"></i> +90 (212) 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> info@speedrent.com</li>
+                        <li><i class="fas fa-clock"></i> Pazartesi - Pazar: 08:00 - 22:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SpeedRent. Tüm hakları saklıdır.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Kullanım Şartları</a>
+                    <a href="#">Gizlilik Politikası</a>
+                    <a href="#">Çerezler</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Google Maps JavaScript -->
+    <script>
+        function initMap() {
+            // Ana mağaza koordinatları (İstanbul)
+            const officeLocation = { lat: 41.0082, lng: 28.9784 };
+            
+            // Harita oluşturma
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: officeLocation,
+                mapTypeControl: false,
+                streetViewControl: false,
+                fullscreenControl: true,
+                zoomControl: true,
+                styles: [
+                    {
+                        featureType: "poi",
+                        elementType: "labels",
+                        stylers: [{ visibility: "off" }],
+                    }
+                ]
+            });
+            
+            // Marker oluşturma
+            const marker = new google.maps.Marker({
+                position: officeLocation,
+                map: map,
+                title: "SpeedRent Ana Mağaza",
+                icon: {
+                    url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
+                    scaledSize: new google.maps.Size(50, 50)
+                },
+                animation: google.maps.Animation.DROP
+            });
+            
+            // Info window oluşturma
+            const infoWindow = new google.maps.InfoWindow({
+                content: `
+                    <div class="map-info-window">
+                        <h3>SpeedRent Ana Mağaza</h3>
+                        <p>Bağdat Caddesi No:123, Kadıköy/İstanbul</p>
+                        <p><strong>Tel:</strong> +90 (212) 123 45 67</p>
+                        <p><strong>Çalışma Saatleri:</strong> 08:00 - 22:00</p>
+                        <a href="https://maps.google.com/maps?q=41.0082,28.9784" target="_blank">Yol Tarifi Al</a>
+                    </div>
+                `
+            });
+            
+            // Marker'a tıklama olayı
+            marker.addListener("click", () => {
+                infoWindow.open(map, marker);
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap" async defer></script>
+    
+    <!-- Form Validation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form doğrulama
+            const contactForm = document.querySelector('.contact-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Form doğrulama işlemleri burada yapılabilir
+                    // Basit bir doğrulama örneği:
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    
+                    if (name && email && message) {
+                        // Formu gönderme işlemi (normalde backend'e gönderilir)
+                        alert('Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.');
+                        contactForm.reset();
+                    } else {
+                        alert('Lütfen tüm zorunlu alanları doldurun.');
+                    }
+                });
+            }
+            
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const toggle = item.querySelector('.faq-toggle');
+                
+                question.addEventListener('click', () => {
+                    // Tüm diğer açık soruları kapat
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-toggle i').classList.remove('fa-minus');
+                            otherItem.querySelector('.faq-toggle i').classList.add('fa-plus');
+                        }
+                    });
+                    
+                    // Tıklanan soruyu aç/kapat
+                    item.classList.toggle('active');
+                    if (item.classList.contains('active')) {
+                        toggle.querySelector('i').classList.remove('fa-plus');
+                        toggle.querySelector('i').classList.add('fa-minus');
+                    } else {
+                        toggle.querySelector('i').classList.remove('fa-minus');
+                        toggle.querySelector('i').classList.add('fa-plus');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

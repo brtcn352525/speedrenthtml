@@ -1,0 +1,401 @@
+/* Locations Page Styles */
+
+/* Hero Section */
+.locations-hero {
+    position: relative;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: var(--header-height);
+    overflow: hidden;
+}
+
+.locations-hero-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.locations-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.locations-hero-content p {
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.locations-hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.pexels.com/photos/3264572/pexels-photo-3264572.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(231, 76, 60, 0.7));
+    z-index: 1;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Map Section */
+.map-section {
+    padding: 5rem 0;
+    background-color: var(--gray-light);
+}
+
+.map-container {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+#map {
+    flex: 1;
+    height: 700px;
+}
+
+.location-finder {
+    width: 400px;
+    background-color: white;
+    padding: 2rem;
+    border-left: 1px solid var(--gray-medium);
+    overflow-y: auto;
+    max-height: 700px;
+}
+
+.location-finder h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    position: relative;
+}
+
+.location-finder h3:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    border-radius: 3px;
+}
+
+.location-search {
+    display: flex;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.location-search input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--gray-medium);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    font-size: 1rem;
+}
+
+.location-search button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 1rem;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    transition: background-color 0.3s ease;
+}
+
+.location-search button:hover {
+    background-color: var(--primary-dark);
+}
+
+.location-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.location-item {
+    display: flex;
+    padding: 1.2rem;
+    border-radius: var(--border-radius);
+    background-color: var(--gray-light);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-left: 4px solid transparent;
+}
+
+.location-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+    background-color: white;
+}
+
+.location-item.active {
+    border-left: 4px solid var(--primary-color);
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+.location-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.location-info {
+    flex: 1;
+}
+
+.location-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.location-info p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.8rem;
+}
+
+.location-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.location-details span {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+}
+
+.location-details i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+    width: 16px;
+}
+
+/* Map Info Window Styling */
+.map-info-window {
+    padding: 0.5rem;
+    max-width: 250px;
+}
+
+.map-info-window h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.map-info-window p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.map-info-window a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 5rem 0;
+    background-color: var(--gray-light);
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: rgba(255, 107, 0, 0.05);
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--text-dark);
+    padding-right: 2rem;
+}
+
+.faq-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-toggle i {
+    font-size: 0.8rem;
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    max-height: 500px;
+    opacity: 1;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(135deg);
+}
+
+.faq-answer p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .map-container {
+        margin: 0 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .map-container {
+        flex-direction: column;
+    }
+    
+    #map {
+        height: 400px;
+    }
+    
+    .location-finder {
+        width: 100%;
+        max-height: 500px;
+    }
+    
+    .locations-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .locations-hero-content p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .locations-hero {
+        height: 350px;
+    }
+    
+    .locations-hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .locations-hero-content p {
+        font-size: 1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .locations-hero {
+        height: 300px;
+    }
+    
+    .locations-hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .locations-hero-content p {
+        font-size: 0.9rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+    
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+} 
